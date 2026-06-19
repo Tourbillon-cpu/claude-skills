@@ -1,6 +1,6 @@
 # 🛠️ Claude Code 自定义技能集
 
-我个人写的 Claude Code 自定义技能（Custom Skills），主要用于实验数据处理和日常效率提升。
+个人根据与Agent（DeepSeek V4 flash on Claude Code）的对对话与项目经验写的 Claude Code 自定义技能（Custom Skills），主要用于实验数据处理和日常效率提升。
 
 ## 📦 技能列表
 
