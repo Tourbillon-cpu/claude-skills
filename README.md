@@ -1,6 +1,6 @@
 # 🛠️ Claude Code 自定义技能集
 
-个人根据与Agent（DeepSeek V4 flash on Claude Code）的对对话与项目经验写的 Claude Code 自定义技能（Custom Skills），主要用于实验数据处理和日常效率提升。
+个人根据与 AI Agent 的对话与项目经验编写的 Claude Code 自定义技能（Custom Skills），主要用于实验数据处理、记忆文件维护和日常效率提升。
 
 ## 📦 技能列表
 
@@ -21,15 +21,25 @@
 - **安全机制：** 删除前让用户确认，不擅自操作
 - **适用范围：** 缓存文件、临时克隆的仓库、网页抓取缓存等
 
+### 3. [Memory Maintenance](./memory-maintenance/SKILL.md) — 记忆文件维护
+
+记忆文件的创建规范与维护手册，用于定期清理和整理 Claude Code 的记忆系统。
+
+- **目录规范：** `user/` / `project/` / `reference/` 三层结构
+- **生命周期管理：** permanent（常驻） / temporary（做完即删）
+- **清理清单：** 内容重复检查、过期信息更新、索引同步
+- **适用场景：** 记忆文件熵增时"对抗熵增"
+
 ## 🚀 使用方法
 
-1. 将 `origin-datalab` 和 `session-cleanup` 文件夹放入 Claude Code 的 skills 目录：
+1. 将各 skill 文件夹放入 Claude Code 的 skills 目录：
    ```
    .claude/skills/
    ```
-2. 在 Claude Code 中通过 `/skill-name` 调用：
-   - `/origin-datalab` — 处理实验数据
-   - `/session-cleanup` — 收尾清理
+2. 在 Claude Code 中通过触发关键词自动调用：
+   - 处理实验数据 → `origin-datalab`
+   - 收尾清理 → `session-cleanup`
+   - 记忆文件维护 → `memory-maintenance`
 
 ## 📝 许可
 
